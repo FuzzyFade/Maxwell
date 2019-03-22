@@ -1,18 +1,14 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- * @lint-ignore-every XPLATJSCOPYRIGHT1
- */
 import React from "react";
-import {createStackNavigator, createAppContainer} from "react-navigation";
+import {
+    createStackNavigator,
+    createAppContainer,
+    createBottomTabNavigator
+} from "react-navigation";
 
 import HomeScreen from './src/pages/Home';
-import DetailPage from './src/pages/Detail';
+import DetailPage from './src/pages/Detail'
 
-const AppNavigator = createStackNavigator({
+const AppNavigator = createBottomTabNavigator({
     Home: {
         screen: HomeScreen,
     },
@@ -23,4 +19,12 @@ const AppNavigator = createStackNavigator({
     initialRouteName: "Home"
 });
 
+
 export default createAppContainer(AppNavigator);
+
+// const TabNavigator = createBottomTabNavigator({
+//     Home: HomeScreen,
+//     Detail: DetailPage,
+// });
+//
+// export default createAppContainer(TabNavigator);

@@ -4,10 +4,9 @@ import {SafeAreaView} from "react-navigation";
 import {styles} from "../CSS/mainStyles";
 
 class HomeScreen extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = {text:''}
-    }
+    state = {
+        text: "Home",
+    };
     static navigationOptions = {
         headerTitle: 'Home',
         headerStyle: {
@@ -19,7 +18,7 @@ class HomeScreen extends React.Component {
     };
     render() {
         return (
-            <SafeAreaView style={styles.container}>
+            <SafeAreaView style={styles.bottom}>
                 <TextInput placeholder="请输入颜色" onChangeText={text => this.setState({text})}/>
                 <Text>{this.state.text}</Text>
                 <Button
