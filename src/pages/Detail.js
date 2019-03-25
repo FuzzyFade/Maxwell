@@ -12,7 +12,9 @@ const tip = () => Alert.alert(
     ],
     { cancelable: false }
 );
-
+const mals=()=>{
+    
+}
 class DetailPage extends React.Component {
     static navigationOptions = {
         headerTitle: 'Details',
